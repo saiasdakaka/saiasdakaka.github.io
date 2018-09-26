@@ -4,11 +4,11 @@
 */
 @font-face {
   font-family: cherl;
-  src: url("../fonts/CHERL___.ttf");
+  src: url("../fonts/CHERL__.ttf");
 }
 @font-face {
   font-family: cheri;
-  src: url("../fonts/CHERI___.ttf");
+  src: url("../fonts/CHERI__.ttf");
 }
 /*
 * Override Bootstrap variables
@@ -7511,4 +7511,5 @@ footer .about-text {
     padding: 40px 0;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
