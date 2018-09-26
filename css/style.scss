@@ -1,13 +1,26 @@
 /*
-* Custom variables
+* Variaveis
 */
+
+@font-face {
+    font-family: cherl;
+    src: url('../fonts/CHERL___.ttf');
+}
+
+@font-face {
+    font-family: cheri;
+    src: url('../fonts/CHERI___.ttf');
+}
+
 $main-font: 'Lato', sans-serif;
 $sub-font: 'Montserrat', sans-serif;
 $fancy-font: 'Kaushan Script', cursive;
-$font-size: 16px;
+$title-font: cherl, cursive;
+$font-size: 18px;
  
 $black: #000;
 $white: #FFF;
+
 $grey: #585c65;
 $mediumgrey: #9b9b9b;
 $lightgrey: #eeeeee;
@@ -23,130 +36,113 @@ $font-family-sans-serif: $main-font;
  
 @import 'bootstrap';
 
+.fancy-font {
+    font-family: $fancy-font;
+}
+
+.title-font {
+    font-family: $title-font;
+}
+
 * {
-    position: relative;
     box-sizing: border-box;
 }
- 
+
+html, body{
+	width: 100%;
+	height: 100%;
+	
+	margin: 0;
+	padding: 0;
+}
+
 body {
     color: $grey;
     font-size: $font-size;
+	
+	background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
 }
- 
- 
+
+.name {
+    background-color: $white;
+    width: 100%;
+
+    position: absolute;
+    top: 10px;
+
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:50px;
+
+    font-size: 21px;
+    color: $black;
+    
+    .social {
+        float: right;
+        margin-right: 50px;
+    }
+}
+.social {
+    a {
+        float: left;
+        width: 35px;
+        height: 35px;
+        margin: 0 5px;
+
+        background: url(../images/social-sprite@2x.png) no-repeat;
+        background-size: 70px 35px;
+        opacity: 0.2;
+
+        &:hover {
+            opacity: 1.0;
+        }
+
+        &.facebook {
+            background-position: 0px 0px;
+        }
+
+        &.instagram {
+            background-position: -35px 0px;
+        }
+    }
+ }
+
 header {
-    max-height: 600px;
-    height: 600px;
-    overflow: hidden;
+    height: 100%;
+    min-height: 435px;
 
-    img {
-	    position: fixed;
-	    top: 0px;
-	    left: 50%;
-	    margin-left: -600px;
-	    width: 1200px;
-	 
-	    @media screen and (min-width: $screen-lg) {
-	        top: auto;
-	        left: auto;
-	        margin: 0;
-	        width: 100%;
-	    }
-	}
-
-	.name {
-	    font-size: 21px;
-	    position: absolute;
-	    top: 50px;
-	    left: 50px;
-	    color: $black;
-	}
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 	.titles {
-	    position: absolute;
-	    bottom: 40%;
-	    width: 100%;
-	    text-align: center;
+        text-shadow: 1px 1px $white;
 
-	    @media screen and (min-width: $screen-lg) {
-	        bottom: 50%;
-	    }
-	}
-
-	h1, h2 {
-	    width: 100%;
-	    color: $black;
-	    margin: 0;
-	}
-
-	h1 {
-	    text-transform: uppercase;
-	    font-weight: 700;
-	    font-size: 36px;
-	    letter-spacing: 0.06em;
-	    margin-bottom: $margin;
-
-	    span {
-	        display: block;
-
-	        @media screen and (min-width: $screen-md) {
-	            display: inline;
-	        }
-	    }
-	 }
-
-	 h2 {
-	    font-size: 16px;
-	    width: 70%;
-	    margin: 0 auto;
-
-	    @media screen and (min-width: $screen-lg) {
-	        width: 100%;
-	        margin: 0;
-	    }
-	 }
-
-	 .social {
-        position: absolute;
-        top: 55px;
-        right: 50px;
-        overflow: hidden;
- 
-        a {
+	    img{
             float: left;
-            width: 26px;
-            height: 26px;
-            margin: 0 5px;
-            text-indent: -9999px;
-            background: url(../images/social-sprite.png) no-repeat;
-            opacity: 0.8;
- 
-            &:hover {
-                opacity: 1.0;
-            }
- 
-            @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (-min-device-pixel-ratio: 2) {
-                background: url(../images/social-sprite@2x.png) no-repeat;
-                background-size: 76px 26px;
-            }
- 
-            &.facebook {
-                background-position: 0px 0px;
-            }
- 
-            &.twitter {
-                background-position: -25px 0px;
-            }
- 
-            &.instagram {
-                background-position: -50px 0px;
+            width: 30%;
+        }
+
+        h1{
+            font-family: $title-font;
+            font-weight: 800;
+            font-size: 50px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+
+            @media screen and (max-width: $screen-xs) {
+                font-size: 30px;
             }
         }
-     }
-}
 
-.fancy-font {
-    font-family: $fancy-font;
+        h2{
+            font-family: $fancy-font;
+            padding: 5px;
+        }
+	}
 }
 
 .instagram-wrap {
@@ -155,18 +151,22 @@ header {
  
 .instagram-content {
     h3 {
+        font-family: $sub-font;
         text-transform: uppercase;
         letter-spacing: 0.5em;
-        font-size: 12px;
+        font-size: $font-size;
         font-weight: 700;
         text-align: center;
         padding: $padding*5 0;
         color: darken($lightgrey, 20%);
     }
+
     .photo-box {
         margin: 0 0 $margin*3 0;
  
         .image-wrap {
+            position: relative;
+
             img {
                 width: 100%;
             }
@@ -175,77 +175,47 @@ header {
                 position: absolute;
                 bottom: 5px;
                 left: 15px;
+
                 padding: $padding/2;
                 background: $black;
                 background: rgba($black, 0.4);
                 color: $white;
             }
         }
+
         .description {
             font-family: $sub-font;
-            font-size: 12px;
             background: $white;
             color: $mediumgrey;
-            letter-spacing: 1px;
             padding: $padding*1.5;
-            height: 75px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
         }
     }
 }
 
 footer {
     background: $white;
-    padding: $padding*3 0;
-    text-align: center;
+    padding: $padding*2 0;
  
     @media screen and (min-width: $screen-lg) {
         padding: $padding*10 0;
+    }
+
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
  
     h4 {
         font-size: 36px;
         text-align: center;
         font-weight: 700;
-        text-transform: uppercase;
         letter-spacing: 2px;
     }
  
     .about-text {
         padding: 0 $padding*3;
- 
-        @media screen and (min-width: $screen-lg) {
-            width: 650px;
-            margin: 0 auto;
-        }
-    }
- 
-    .contact-now-btn {
-        display: inline-block;
-        width: 70%;
-        padding: $padding*2 $padding*5;
-        margin-top: $margin*2;
-        color: $white;
-        background: $grey;
-        font-size: 13px;
-        letter-spacing: 1px;
-        text-decoration: none;
-        text-transform: uppercase;
- 
-        @media screen and (min-width: $screen-md) {
-            width: 60%;
-        }
- 
-        @media screen and (min-width: $screen-lg) {
-            width: 20%;
-            margin-top: $margin*5;
-        }
- 
-        &:hover {
-            background: lighten($grey, 5%);
-        }
     }
 }
 
@@ -256,7 +226,6 @@ footer {
     letter-spacing: 2px;
     text-align: center;
     color: $mediumgrey;
-    text-transform: uppercase;
  
     @media screen and (min-width: $screen-md) {
         padding: $padding*4 0;

@@ -1,7 +1,15 @@
 @charset "UTF-8";
 /*
-* Custom variables
+* Variaveis
 */
+@font-face {
+  font-family: cherl;
+  src: url("../fonts/CHERL___.ttf");
+}
+@font-face {
+  font-family: cheri;
+  src: url("../fonts/CHERI___.ttf");
+}
 /*
 * Override Bootstrap variables
 */
@@ -7316,122 +7324,105 @@ button.close {
     display: none !important;
   }
 }
+.fancy-font {
+  font-family: "Kaushan Script", cursive;
+}
+
+.title-font {
+  font-family: cherl, cursive;
+}
+
 * {
-  position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: #585c65;
-  font-size: 16px;
+  font-size: 18px;
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.name {
+  background-color: #FFF;
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 50px;
+  font-size: 21px;
+  color: #000;
+}
+.name .social {
+  float: right;
+  margin-right: 50px;
+}
+
+.social a {
+  float: left;
+  width: 35px;
+  height: 35px;
+  margin: 0 5px;
+  background: url(../images/social-sprite@2x.png) no-repeat;
+  background-size: 70px 35px;
+  opacity: 0.2;
+}
+.social a:hover {
+  opacity: 1.0;
+}
+.social a.facebook {
+  background-position: 0px 0px;
+}
+.social a.instagram {
+  background-position: -35px 0px;
 }
 
 header {
-  max-height: 600px;
-  height: 600px;
-  overflow: hidden;
-}
-header img {
-  position: fixed;
-  top: 0px;
-  left: 50%;
-  margin-left: -600px;
-  width: 1200px;
-}
-@media screen and (min-width: 1200px) {
-  header img {
-    top: auto;
-    left: auto;
-    margin: 0;
-    width: 100%;
-  }
-}
-header .name {
-  font-size: 21px;
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  color: #000;
+  height: 100%;
+  min-height: 435px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 header .titles {
-  position: absolute;
-  bottom: 40%;
-  width: 100%;
-  text-align: center;
+  text-shadow: 1px 1px #FFF;
 }
-@media screen and (min-width: 1200px) {
-  header .titles {
-    bottom: 50%;
-  }
-}
-header h1, header h2 {
-  width: 100%;
-  color: #000;
-  margin: 0;
-}
-header h1 {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 36px;
-  letter-spacing: 0.06em;
-  margin-bottom: 10px;
-}
-header h1 span {
-  display: block;
-}
-@media screen and (min-width: 992px) {
-  header h1 span {
-    display: inline;
-  }
-}
-header h2 {
-  font-size: 16px;
-  width: 70%;
-  margin: 0 auto;
-}
-@media screen and (min-width: 1200px) {
-  header h2 {
-    width: 100%;
-    margin: 0;
-  }
-}
-header .social {
-  position: absolute;
-  top: 55px;
-  right: 50px;
-  overflow: hidden;
-}
-header .social a {
+header .titles img {
   float: left;
-  width: 26px;
-  height: 26px;
-  margin: 0 5px;
-  text-indent: -9999px;
-  background: url(../images/social-sprite.png) no-repeat;
-  opacity: 0.8;
+  width: 30%;
 }
-header .social a:hover {
-  opacity: 1.0;
+header .titles h1 {
+  font-family: cherl, cursive;
+  font-weight: 800;
+  font-size: 50px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (-min-device-pixel-ratio: 2) {
-  header .social a {
-    background: url(../images/social-sprite@2x.png) no-repeat;
-    background-size: 76px 26px;
+@media screen and (max-width: 480px) {
+  header .titles h1 {
+    font-size: 30px;
   }
 }
-header .social a.facebook {
-  background-position: 0px 0px;
-}
-header .social a.twitter {
-  background-position: -25px 0px;
-}
-header .social a.instagram {
-  background-position: -50px 0px;
-}
-
-.fancy-font {
+header .titles h2 {
   font-family: "Kaushan Script", cursive;
+  padding: 5px;
 }
 
 .instagram-wrap {
@@ -7439,9 +7430,10 @@ header .social a.instagram {
 }
 
 .instagram-content h3 {
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.5em;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 700;
   text-align: center;
   padding: 50px 0;
@@ -7449,6 +7441,9 @@ header .social a.instagram {
 }
 .instagram-content .photo-box {
   margin: 0 0 30px 0;
+}
+.instagram-content .photo-box .image-wrap {
+  position: relative;
 }
 .instagram-content .photo-box .image-wrap img {
   width: 100%;
@@ -7464,68 +7459,43 @@ header .social a.instagram {
 }
 .instagram-content .photo-box .description {
   font-family: "Montserrat", sans-serif;
-  font-size: 12px;
   background: #FFF;
   color: #9b9b9b;
-  letter-spacing: 1px;
   padding: 15px;
-  height: 75px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 footer {
   background: #FFF;
-  padding: 30px 0;
-  text-align: center;
+  padding: 20px 0;
 }
 @media screen and (min-width: 1200px) {
   footer {
     padding: 100px 0;
   }
 }
+footer .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 footer h4 {
   font-size: 36px;
   text-align: center;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 footer .about-text {
   padding: 0 30px;
-}
-@media screen and (min-width: 1200px) {
-  footer .about-text {
-    width: 650px;
-    margin: 0 auto;
-  }
-}
-footer .contact-now-btn {
-  display: inline-block;
-  width: 70%;
-  padding: 20px 50px;
-  margin-top: 20px;
-  color: #FFF;
-  background: #585c65;
-  font-size: 13px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 992px) {
-  footer .contact-now-btn {
-    width: 60%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  footer .contact-now-btn {
-    width: 20%;
-    margin-top: 50px;
-  }
-}
-footer .contact-now-btn:hover {
-  background: #646873;
 }
 
 .footer-bottom {
@@ -7535,12 +7505,10 @@ footer .contact-now-btn:hover {
   letter-spacing: 2px;
   text-align: center;
   color: #9b9b9b;
-  text-transform: uppercase;
 }
 @media screen and (min-width: 992px) {
   .footer-bottom {
     padding: 40px 0;
   }
 }
-
 /*# sourceMappingURL=style.css.map */
