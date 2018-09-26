@@ -2,10 +2,10 @@ $(function() {
  
     //Set up instafeed
     var feed = new Instafeed({
-        clientId: '97ae5f4c024c4a91804f959f43f2635f',
+        clientId: '1b2a55829e13404eafa401a5213b2b7d',
         target: 'instafeed',
         get: 'tagged',
-        tagName: 'photographyportfolio',
+        tagName: 'saiasdakaka',
         links: true,
         limit: 8,
         sortBy: 'most-recent',
