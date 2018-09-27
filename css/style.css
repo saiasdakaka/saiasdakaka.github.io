@@ -3,6 +3,18 @@
 * Variaveis
 */
 @font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Italic.ttf");
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-ExtraLightItalic.ttf");
+}
+@font-face {
+  font-family: KaushanScript;
+  src: url("../fonts/KaushanScript-Regular.ttf");
+}
+@font-face {
   font-family: cherl;
   src: url("../fonts/CHERL__.ttf");
 }
@@ -1409,7 +1421,7 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: Lato, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -6547,7 +6559,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Lato", sans-serif;
+  font-family: Lato, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6669,7 +6681,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Lato", sans-serif;
+  font-family: Lato, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -7325,7 +7337,7 @@ button.close {
   }
 }
 .fancy-font {
-  font-family: "Kaushan Script", cursive;
+  font-family: KaushanScript, cursive;
 }
 
 .title-font {
@@ -7381,10 +7393,10 @@ body {
 .social a:hover {
   opacity: 1.0;
 }
-.social a.facebook {
+.social a.instagram {
   background-position: 0px 0px;
 }
-.social a.instagram {
+.social a.facebook {
   background-position: -35px 0px;
 }
 
@@ -7421,7 +7433,7 @@ header .titles h1 {
   }
 }
 header .titles h2 {
-  font-family: "Kaushan Script", cursive;
+  font-family: KaushanScript, cursive;
   padding: 15px;
 }
 
@@ -7430,7 +7442,7 @@ header .titles h2 {
 }
 
 .instagram-content h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.5em;
   font-size: 18px;
@@ -7458,7 +7470,7 @@ header .titles h2 {
   color: #FFF;
 }
 .instagram-content .photo-box .description {
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat, sans-serif;
   background: #FFF;
   color: #9b9b9b;
   padding: 15px;
@@ -7511,5 +7523,4 @@ footer .about-text {
     padding: 40px 0;
   }
 }
-
 /*# sourceMappingURL=style.css.map */

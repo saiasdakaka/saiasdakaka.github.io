@@ -3,6 +3,21 @@
 */
 
 @font-face {
+    font-family: Lato;
+    src: url('../fonts/Lato-Italic.ttf');
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../fonts/Montserrat-ExtraLightItalic.ttf');
+}
+
+@font-face {
+    font-family: KaushanScript;
+    src: url('../fonts/KaushanScript-Regular.ttf');
+}
+
+@font-face {
     font-family: cherl;
     src: url('../fonts/CHERL__.ttf');
 }
@@ -12,9 +27,9 @@
     src: url('../fonts/CHERI__.ttf');
 }
 
-$main-font: 'Lato', sans-serif;
-$sub-font: 'Montserrat', sans-serif;
-$fancy-font: 'Kaushan Script', cursive;
+$main-font: Lato, sans-serif;
+$sub-font: Montserrat, sans-serif;
+$fancy-font: KaushanScript, cursive;
 $title-font: cherl, cursive;
 $font-size: 18px;
  
@@ -100,11 +115,11 @@ body {
             opacity: 1.0;
         }
 
-        &.facebook {
+        &.instagram {
             background-position: 0px 0px;
         }
 
-        &.instagram {
+        &.facebook {
             background-position: -35px 0px;
         }
     }
