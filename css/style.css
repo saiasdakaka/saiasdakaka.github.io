@@ -7402,7 +7402,7 @@ body {
 
 header {
   height: 100%;
-  min-height: 435px;
+  min-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7413,12 +7413,22 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (max-width: 350px) {
+  header {
+    margin-top: 25px;
+  }
+}
 header .titles {
   text-shadow: 1px 1px #FFF;
 }
 header .titles img {
   float: left;
   width: 30%;
+}
+@media screen and (max-width: 290px) {
+  header .titles img {
+    display: none;
+  }
 }
 header .titles h1 {
   font-family: cherl, cursive;
@@ -7505,6 +7515,11 @@ footer h4 {
   text-align: center;
   font-weight: 700;
   letter-spacing: 2px;
+}
+@media screen and (max-width: 315px) {
+  footer h4 {
+    font-size: 26px;
+  }
 }
 footer .about-text {
   padding: 0 30px;
