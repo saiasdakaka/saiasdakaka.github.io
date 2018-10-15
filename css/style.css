@@ -7362,7 +7362,7 @@ body {
   background-image: url("../images/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .name {
@@ -7538,4 +7538,5 @@ footer .about-text {
     padding: 40px 0;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
